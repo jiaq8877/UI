@@ -21,7 +21,7 @@
         <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Basic Information"/>
+                android:text="@string/basic_information"/>
 
         <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -39,37 +39,43 @@
             android:inputType="textPersonName"
             android:text="Gender"
             android:ems="10"
-            android:id="@+id/editTextTextPersonName" tools:layout_editor_absoluteY="356dp"
-            tools:layout_editor_absoluteX="99dp"/>
+            android:id="@+id/editTextTextPersonName"
+            tools:layout_editor_absoluteX="99dp" app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+            app:layout_constraintBottom_toTopOf="@+id/editTextDate"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
-            android:id="@+id/editTextDate" tools:layout_editor_absoluteY="411dp" tools:layout_editor_absoluteX="99dp"
-            android:text="Date of Birth"/>
+            android:id="@+id/editTextDate" tools:layout_editor_absoluteX="99dp"
+            android:text="Date of Birth" app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTime"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="time"
             android:ems="10"
-            android:id="@+id/editTextTime" tools:layout_editor_absoluteY="467dp" tools:layout_editor_absoluteX="99dp"
-            android:text="Time of Birth"/>
+            android:id="@+id/editTextTime" tools:layout_editor_absoluteX="99dp"
+            android:text="Time of Birth" app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPhone"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editTextPhone" tools:layout_editor_absoluteY="520dp" tools:layout_editor_absoluteX="99dp"
-            android:text="Emergency Contact"/>
+            android:id="@+id/editTextPhone" tools:layout_editor_absoluteX="99dp"
+            android:text="Emergency Contact" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTime"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="Name"
             android:ems="10"
-            android:id="@+id/editTextTextPersonName2" tools:layout_editor_absoluteY="300dp"
-            tools:layout_editor_absoluteX="99dp"/>
+            android:id="@+id/editTextTextPersonName2"
+            tools:layout_editor_absoluteX="99dp" app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintVertical_chainStyle="packed"/>
     <Spinner
             android:layout_width="409dp"
             android:layout_height="wrap_content" tools:layout_editor_absoluteX="1dp" android:id="@+id/spinner3"
